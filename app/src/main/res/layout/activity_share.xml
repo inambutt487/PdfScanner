@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="me.sid.smartcropper.views.activities.ShareActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        />
+
+    <ImageView
+        android:id="@+id/premiumImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_premium_d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backImg"
+        app:layout_constraintBottom_toBottomOf="@id/backImg"
+        android:layout_marginEnd="@dimen/_16sdp"
+        />
+
+    <ImageView
+        android:id="@+id/pdfImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pdf_ad_ic"
+        app:layout_constraintEnd_toStartOf="@id/premiumImg"
+        app:layout_constraintTop_toTopOf="@id/backImg"
+        app:layout_constraintBottom_toBottomOf="@id/backImg"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="8dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/shareCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/backImg"
+        android:layout_marginTop="@dimen/_12sdp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_12sdp"
+            >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/btn_goToCamera"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginBottom="13dp"
+                android:elevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/love" />
+
+
+            <TextView
+                android:id="@+id/sharetxtr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share the love by inviting your friends and family to our app"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#4E5B6A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_goToCamera"
+                android:gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                />
+
+            <ImageView
+                android:id="@+id/shareImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_ic_t"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gmailImg"
+                app:layout_constraintTop_toBottomOf="@id/sharetxtr"
+                />
+            <ImageView
+                android:id="@+id/gmailImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gmail_ic"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toEndOf="@id/shareImg"
+                app:layout_constraintEnd_toEndOf="@id/instaImg"
+                app:layout_constraintTop_toBottomOf="@id/sharetxtr"
+                />
+
+
+            <ImageView
+                android:id="@+id/instaImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gmail_ic"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toEndOf="@id/gmailImg"
+                app:layout_constraintTop_toBottomOf="@id/sharetxtr"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <!--<ImageView
+                android:id="@+id/whatsappImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/whatsapp_ic"
+                app:layout_constraintEnd_toStartOf="@id/fbImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/instaImg"
+                android:layout_marginTop="@dimen/_12sdp"
+                />
+            <ImageView
+                android:id="@+id/fbImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebook_ic"
+                app:layout_constraintEnd_toStartOf="@id/twitterImg"
+                app:layout_constraintStart_toEndOf="@id/whatsappImg"
+                app:layout_constraintTop_toBottomOf="@id/instaImg"
+                android:layout_marginTop="@dimen/_12sdp"
+                />
+            <ImageView
+                android:id="@+id/twitterImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/twitter_ic"
+                app:layout_constraintStart_toEndOf="@id/fbImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/instaImg"
+                android:layout_marginTop="@dimen/_12sdp"
+                />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/ad_bg"
+        app:layout_constraintTop_toBottomOf="@id/shareCv"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.facebook.ads.NativeAdLayout
+            android:id="@+id/native_ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/admobNativeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/adlayout2"
+            layout="@layout/ad_loading2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

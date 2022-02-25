@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:elevation="@dimen/_5sdp"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginEnd="@dimen/_4sdp"
+    >
+
+
+  <!--  <RelativeLayout
+        android:id="@+id/fileTypeRl"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/pdf_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/fileTypeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="P"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    -->
+
+  <ImageView
+      android:id="@+id/fileTypeRl"
+      android:layout_width="@dimen/_40sdp"
+      android:layout_height="@dimen/_40sdp"
+      android:src="@drawable/ic_pdf_ic_re"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      />
+
+  <TextView
+      android:id="@+id/fileNameTv"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:ellipsize="end"
+      android:maxLength="35"
+      android:maxLines="1"
+      android:paddingEnd="@dimen/_15sdp"
+      android:text="PPdf"
+      android:textColor="@color/dark_grey"
+      android:fontFamily="@font/roboto_bold"
+      android:textSize="12dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@+id/sizeTv"
+      app:layout_constraintStart_toEndOf="@+id/fileTypeRl"
+      app:layout_constraintTop_toTopOf="@+id/fileTypeRl" />
+
+  <TextView
+      android:id="@+id/viewTv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="View"
+      android:background="@drawable/view_bg"
+      android:paddingStart="@dimen/_10sdp"
+      android:paddingEnd="@dimen/_10sdp"
+      android:paddingTop="@dimen/_2sdp"
+      android:paddingBottom="@dimen/_2sdp"
+      android:textColor="@color/colorPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="@id/fileTypeRl"
+      />
+
+
+  <TextView
+      android:id="@+id/dateTv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="10-10-2020"
+      android:fontFamily="@font/roboto"
+      android:textColor="@color/light_grey"
+      android:textSize="10sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@id/fileTypeRl"
+      />
+
+
+  <TextView
+      android:id="@+id/sizeTv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="3MB"
+      android:fontFamily="@font/roboto"
+      android:textColor="@color/light_grey"
+      android:textSize="10sp"
+      app:layout_constraintEnd_toStartOf="@id/dateTv"
+      app:layout_constraintTop_toTopOf="@id/dateTv"
+      android:layout_marginEnd="@dimen/_4sdp"
+      />
+
+
+  <ImageView
+      android:id="@+id/shareImg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_share_h"
+      app:layout_constraintStart_toEndOf="@id/fileTypeRl"
+      app:layout_constraintBottom_toBottomOf="@id/fileTypeRl"
+      android:layout_marginBottom="@dimen/_6sdp"
+      app:layout_constraintEnd_toStartOf="@id/renameImg"
+      />
+
+  <ImageView
+      android:id="@+id/renameImg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_rename_h"
+      app:layout_constraintStart_toEndOf="@id/shareImg"
+      app:layout_constraintBottom_toBottomOf="@id/fileTypeRl"
+      app:layout_constraintEnd_toStartOf="@id/deleteImg"
+      android:layout_marginBottom="@dimen/_6sdp"
+      />
+
+  <ImageView
+      android:id="@+id/deleteImg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_delete_h"
+      app:layout_constraintStart_toEndOf="@id/renameImg"
+      app:layout_constraintBottom_toBottomOf="@id/fileTypeRl"
+      app:layout_constraintEnd_toStartOf="@id/saveImg"
+      android:layout_marginBottom="@dimen/_6sdp"
+      />
+
+  <ImageView
+      android:id="@+id/saveImg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_save_h"
+      app:layout_constraintStart_toEndOf="@id/deleteImg"
+      app:layout_constraintBottom_toBottomOf="@id/fileTypeRl"
+      android:layout_marginBottom="@dimen/_6sdp"
+      app:layout_constraintEnd_toStartOf="@id/viewTv"
+      />
+
+  <TextView
+      android:id="@+id/shareTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Share"
+      android:textColor="@color/light_grey"
+      app:layout_constraintStart_toStartOf="@id/shareImg"
+      app:layout_constraintEnd_toEndOf="@id/shareImg"
+      app:layout_constraintTop_toBottomOf="@id/shareImg"
+      android:textSize="8sp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Rename"
+      android:textColor="@color/light_grey"
+      app:layout_constraintStart_toStartOf="@id/renameImg"
+      app:layout_constraintEnd_toEndOf="@id/renameImg"
+      app:layout_constraintTop_toBottomOf="@id/renameImg"
+      android:textSize="8sp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Delete"
+      android:textColor="@color/light_grey"
+      app:layout_constraintStart_toStartOf="@id/deleteImg"
+      app:layout_constraintEnd_toEndOf="@id/deleteImg"
+      app:layout_constraintTop_toBottomOf="@id/deleteImg"
+      android:textSize="8sp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Save"
+      android:textColor="@color/light_grey"
+      app:layout_constraintStart_toStartOf="@id/saveImg"
+      app:layout_constraintEnd_toEndOf="@id/saveImg"
+      app:layout_constraintTop_toBottomOf="@id/saveImg"
+      android:textSize="8sp"
+      />
+
+
+  <View
+      android:id="@+id/shareView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintEnd_toStartOf="@id/renameView"
+      app:layout_constraintStart_toEndOf="@id/fileTypeRl"
+      app:layout_constraintTop_toTopOf="@id/saveImg"
+      app:layout_constraintBottom_toBottomOf="@id/shareTxt"
+      android:layout_marginStart="@dimen/_16sdp"
+      />
+
+  <View
+      android:id="@+id/renameView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintEnd_toStartOf="@id/deleteView"
+      app:layout_constraintStart_toEndOf="@id/shareView"
+      app:layout_constraintTop_toTopOf="@id/saveImg"
+      app:layout_constraintBottom_toBottomOf="@id/shareTxt"
+      />
+
+  <View
+      android:id="@+id/deleteView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintEnd_toStartOf="@id/saveView"
+      app:layout_constraintStart_toEndOf="@id/renameView"
+      app:layout_constraintTop_toTopOf="@id/saveImg"
+      app:layout_constraintBottom_toBottomOf="@id/shareTxt"
+      />
+
+  <View
+      android:id="@+id/saveView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintEnd_toStartOf="@id/viewTv"
+      app:layout_constraintStart_toEndOf="@id/deleteView"
+      app:layout_constraintTop_toTopOf="@id/saveImg"
+      app:layout_constraintBottom_toBottomOf="@id/shareTxt"
+      android:layout_marginEnd="@dimen/_16sdp"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

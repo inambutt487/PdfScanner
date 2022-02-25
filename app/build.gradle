@@ -1,0 +1,147 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.pdfscanner.documentscanner.pdfmaster"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1"
+
+        resConfigs "en"
+
+    }
+    buildTypes {
+
+        debug {
+
+            manifestPlaceholders = [crashlyticsEnabled: false]
+
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+            resValue "string", "admob_app_id", "ca-app-pub-3940256099942544~3347511713"
+            resValue "string", "admob_banner", "ca-app-pub-3940256099942544/6300978111"
+            resValue "string", "admob_interstitial", "ca-app-pub-3940256099942544/1033173712"
+            resValue "string", "admob_native", "ca-app-pub-3940256099942544/2247696110"
+
+            resValue "string", "fb_banner", ""
+            resValue "string", "fb_rectangle", ""
+            resValue "string", "fb_interstitial", "IMG_16_9_APP_INSTALL#955635561844164_966026594138394"
+            resValue "string", "fb_native", "IMG_16_9_APP_INSTALL#955635561844164_966027294138324"
+        }
+
+        release {
+
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+            resValue "string", "admob_app_id", "ca-app-pub-7461973117883281~2530779434"
+            resValue "string", "admob_banner", ""
+            resValue "string", "admob_interstitial", ""
+            resValue "string", "admob_native", ""
+
+            resValue "string", "fb_banner", ""
+            resValue "string", "fb_rectangle", ""
+            resValue "string", "fb_interstitial", ""
+            resValue "string", "fb_native", ""
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_android_version"
+    implementation 'androidx.work:work-runtime-ktx:2.7.0'
+
+    //Editing
+    implementation project(path: ':photoeditor')
+
+    //Create PDF
+    implementation files('libs\\itextpdf-5.0.6.jar')
+
+    //lottie
+    implementation "com.airbnb.android:lottie:3.5.0"
+
+    //Design
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.android.support:percent:25.3.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //Firebase
+    def firebase = "29.0.1"
+    implementation platform("com.google.firebase:firebase-bom:$firebase")
+
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //Life Cycle
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+
+    //Billing
+    def billing_version = "4.0.0"
+    implementation "com.android.billingclient:billing:$billing_version"
+
+    //cameraX
+    def camerax_version = "1.0.0-alpha11"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation "androidx.camera:camera-view:1.0.0-alpha11"
+    implementation "androidx.camera:camera-extensions:1.0.0-alpha11"
+
+    //Image Compressor *
+    implementation "io.reactivex.rxjava2:rxjava:2.1.0"
+
+    //Image or Video Picker *
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.4.3'
+
+    //Ads Update Ads
+    implementation 'com.google.android.gms:play-services-ads:19.7.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.+'
+
+    //tts
+    implementation 'org.jetbrains.anko:anko-sdk15:0.9'
+    implementation 'org.jetbrains.anko:anko-support-v4:0.9.1'
+
+    //OCR
+    implementation 'com.google.firebase:firebase-ml-vision:18.0.1'
+    implementation 'com.google.android.gms:play-services-mlkit-language-id:16.0.0-beta2'
+
+    //Translation
+    implementation 'org.jsoup:jsoup:1.11.1'
+
+}

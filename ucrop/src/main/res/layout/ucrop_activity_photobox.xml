@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ucrop_photobox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="start"
+                android:text="CROPPING"
+                android:textColor="@color/ucrop_color_white" />
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_above="@+id/crop_bottom_layout"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_dark">
+
+
+        <FrameLayout
+            android:id="@+id/ucrop_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/controls_wrapper"
+            android:layout_marginBottom="-12dp">
+
+            <ImageView
+                android:id="@+id/image_view_logo"
+                android:layout_width="@dimen/ucrop_default_crop_logo_size"
+                android:layout_height="@dimen/ucrop_default_crop_logo_size"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription,MissingPrefix" />
+
+            <com.yalantis.ucrop.view.UCropView
+                android:id="@+id/ucrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/controls_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/crop_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ucrop_dark_grey"
+        android:gravity="center|right"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/crop_reset"
+            style="@style/ucrop_CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/button_white"
+            android:text="@string/reset"
+            android:visibility="gone"
+            android:textColor="@color/ucrop_black" />
+
+
+        <Button
+            android:id="@+id/crop_cancel"
+            style="@style/ucrop_CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/button_white"
+            android:text="@string/cancel"
+            android:textColor="@color/ucrop_black" />
+
+        <Button
+            android:id="@+id/crop_done"
+            style="@style/ucrop_CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/button_seagreen"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/crop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/left_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp" />
+
+    <ImageView
+        android:id="@+id/right_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_forward"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

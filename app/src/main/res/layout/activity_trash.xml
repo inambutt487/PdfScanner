@@ -1,0 +1,95 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.activities.MultiScanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trash Documents"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_16sdp"
+            />
+
+        <ImageView
+            android:id="@+id/settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text1"
+            app:layout_constraintBottom_toBottomOf="@id/text1"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trash_rv"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintBottom_toTopOf="@id/btn_delete"
+            android:layout_marginBottom="18dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_height="0dp"/>
+
+        <include
+            android:id="@+id/noFileLayout"
+            layout="@layout/no_file_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_delete"
+            style="@style/CustomButton"
+            android:layout_width="148dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_seagreen"
+            android:text="@string/delete"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_restore"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/btn_restore"
+            style="@style/CustomButton"
+            android:layout_width="148dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_pdf_pink"
+            android:text="Restore"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toEndOf="@+id/btn_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

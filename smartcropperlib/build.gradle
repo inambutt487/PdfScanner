@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.sid'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 10
+        versionName "2.1.4"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti"
+                abiFilters 'armeabi-v7a', "arm64-v8a"
+                arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_STL=c++_static"
+            }
+        }
+
+
+        resConfigs "en"
+
+    }
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    ndkVersion '21.0.6113669'
+
+    packagingOptions {
+        exclude 'lib/armeabi-v7a/libARM_ARCH.so'
+    }
+    
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'org.tensorflow:tensorflow-lite:1.13.1'
+}

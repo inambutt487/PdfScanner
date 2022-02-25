@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/delete_layout"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36sp"
+            android:layout_gravity="center"
+            android:background="@color/mid_grey"
+            android:gravity="center"
+            android:src="@drawable/ic_delete_ic"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/allFolderImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/folder_ic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fileNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_bold"
+            android:maxLength="50"
+            android:paddingEnd="5dp"
+            android:text="Pdf directory"
+            android:textColor="#1E2939"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/allFolderImg"
+            app:layout_constraintTop_toTopOf="@+id/allFolderImg" />
+
+        <TextView
+            android:id="@+id/fileSizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto"
+            android:text="10MB"
+            android:textColor="@color/light_grey"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/fileNameTv"
+            app:layout_constraintTop_toBottomOf="@+id/fileNameTv" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="10/10/2020"
+            android:textColor="@color/light_grey"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/option_menu"
+            app:layout_constraintTop_toTopOf="@+id/fileSizeTv" />
+
+        <ImageView
+            android:id="@+id/option_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/empty_view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/gray_div2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/dateTv"
+            app:layout_constraintStart_toStartOf="@+id/allFolderImg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

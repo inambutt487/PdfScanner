@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaultsMap>
+    <entry>
+
+        <key>isadmobsplashinter</key>
+        <value>true</value>
+
+        <key>isadmobsplashDoc</key>
+        <value>true</value>
+
+        <key>isadmobmain</key>
+        <value>true</value>
+
+        <key>isadmobsetting</key>
+        <value>true</value>
+
+        <key>isadmobfolderdoc</key>
+        <value>true</value>
+
+        <key>isadmobpdfinter</key>
+        <value>true</value>
+
+
+
+    </entry>
+
+
+</defaultsMap>

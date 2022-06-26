@@ -37,15 +37,6 @@
     <output-test url="file://$MODULE_DIR$/../../../smartcropperlib/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../smartcropperlib">
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/src/main/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/opencv/include" type="native-header-root" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/src/main/cpp" type="native-Source-root" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../smartcropperlib/src/main/res" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../smartcropperlib/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../smartcropperlib/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../../smartcropperlib/.cxx" />
@@ -53,6 +44,5 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: org.tensorflow:tensorflow-lite:1.13.1@aar" level="project" />
   </component>
 </module>

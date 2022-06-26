@@ -7,6 +7,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5927771c2dc7e2267c3733e1ac49855/jetified-firebase-ml-common-16.1.5/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5927771c2dc7e2267c3733e1ac49855/jetified-firebase-ml-common-16.1.5/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5927771c2dc7e2267c3733e1ac49855/jetified-firebase-ml-common-16.1.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d1f2ab5d0a826e65fe532667e5ab046/jetified-firebase-ml-common-16.1.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d1f2ab5d0a826e65fe532667e5ab046/jetified-firebase-ml-common-16.1.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1d1f2ab5d0a826e65fe532667e5ab046/jetified-firebase-ml-common-16.1.5/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

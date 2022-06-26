@@ -4,8 +4,17 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PdfScanner.iml" filepath="$PROJECT_DIR$/.idea/modules/PdfScanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PdfScanner.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/photoeditor/PdfScanner.photoeditor.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.iml" filepath="$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/smartcropperlib/PdfScanner.smartcropperlib.unitTest.iml" />
     </modules>
   </component>
 </project>

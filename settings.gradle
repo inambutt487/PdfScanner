@@ -1,2 +1,3 @@
 include ':photoeditor'
+include ':smartcropperlib'
 include ':app'

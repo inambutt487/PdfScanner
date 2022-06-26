@@ -14,10 +14,4 @@
         android:title="openpdf"
         app:showAsAction="always" />
 
-    <!--<item
-        android:id="@+id/pdf_to_img"
-        android:icon="@drawable/ic_edit_file"
-        android:title="@string/pdf_to_img"
-        app:showAsAction="always" />-->
-
 </menu>

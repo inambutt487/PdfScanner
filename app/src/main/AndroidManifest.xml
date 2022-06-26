@@ -12,8 +12,16 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+            <data android:mimeType="image/*"/>
+        </intent>
+    </queries>
+
+
     <application
-        android:name=".App"
+        android:name="me.sid.smartcropper.App"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/app_icon"
@@ -26,60 +34,83 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".views.activities.LanguageActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".views.activities.TranslatePDFActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.TranslationActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.CastActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.TermsActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.ShareActivitcy"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.SearchActivity"
+            android:name="me.sid.smartcropper.views.activities.EditActivity"
             android:exported="true"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.EDIT" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="me.sid.smartcropper.views.activities.GernalCameraActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.LanguageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.TranslatePDFActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.TranslationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.CastActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="me.sid.smartcropper.views.activities.TermsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.ShareActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.SearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustNothing" />
         <activity
-            android:name=".views.activities.PremiumActivity"
+            android:name="me.sid.smartcropper.views.activities.PremiumActivity"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
 
         <activity
-            android:name=".views.activities.PrivacyActivity"
+            android:name="me.sid.smartcropper.views.activities.PrivacyActivity"
             android:exported="true"
-            android:screenOrientation="portrait" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_app_id" />
-
-        <activity
-            android:name=".views.activities.BaseActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -94,14 +125,11 @@
         </provider>
 
         <activity
-            android:name=".views.activities.GernalCameraActivity"
+            android:name="me.sid.smartcropper.views.activities.SplashIconActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme" />
-        <activity
-            android:name=".views.activities.SplashActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
+            android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -109,78 +137,69 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.activities.ViewImageActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.ViewTextActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.OCRActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.CropActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.EditActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
-            <intent-filter tools:ignore="AppLinkUrlError">
-                <action android:name="android.intent.action.EDIT" />
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="image/*" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".views.activities.MultiScanActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.TrashActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.DocumentsActivity"
+            android:name="me.sid.smartcropper.views.activities.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.ViewImageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.ViewTextActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.OCRActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.CropOldActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.MultiScanActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.TrashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.sid.smartcropper.views.activities.DocumentsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".views.activities.SettingActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".views.activities.PDFViewerAcitivity"
+            android:name="me.sid.smartcropper.views.activities.PDFViewerAcitivity"
             android:exported="true"
             android:label="Doc Scanner"
-            android:screenOrientation="portrait">
-            <intent-filter tools:ignore="AppLinkUrlError">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
 
-                <!-- <action android:name="android.intent.action.EDIT" /> -->
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
+                <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
-
+                <data android:scheme="content" />
+                <data android:scheme="file" />
                 <data android:mimeType="application/pdf" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.activities.AllFilesInFolderActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".pdf.PdfViewerActivity"
+            android:name="me.sid.smartcropper.views.activities.AllFilesInFolderActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <service
-            android:name=".Service.MyFirebaseMessagingService"
+            android:name="me.sid.smartcropper.Service.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -199,6 +218,7 @@
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="langid" />
+
     </application>
 
 </manifest>

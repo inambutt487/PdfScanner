@@ -41,7 +41,7 @@
             android:fallbackLineSpacing="true"
             android:fontFamily="@font/roboto_medium"
             android:textColor="@color/dark_grey"
-            android:textSize="14dp"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintTop_toTopOf="parent" />
 
 

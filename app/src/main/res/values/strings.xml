@@ -37,7 +37,7 @@
     <string name="msg_save_image">Do you want to exit without saving image?</string>
     <string name="contact_us">Email Support</string>
     <string name="trash">Trash</string>
-    <string name="policy">Terms and Privacy</string>
+    <string name="policy">Privacy Policy</string>
     <string name="rate">Rate and Review</string>
     <string name="share_app">Share App</string>
     <string name="pdf_app">Pdf Reader (Ad)</string>
@@ -88,18 +88,18 @@
     <string name="tts_language_not_available_msg1">Selected speaker language is not available, using default instead.</string>
     <string name="tts_language_not_available_msg2">Neither the selected nor the system speaker languages are available.</string>
 
-    <string name="incompatible_wave_file_error_msg">Error: the selected text-to-speech engine provided wave files that couldn\'t be joined together. Because of this, the app cannot produce wave files for selected text files longer than 4000 characters. Please try again using a shorter text file.</string>
+    <string name="incompatible_wave_file_error_msg">Error: the selected text-to-speech engine provided wave files that couldn\'t be joined together. Because of this, the app can not produce wave files for selected text files longer than 4000 characters. Please try again using a shorter text file.</string>
     <string name="generic_wave_file_error_msg">Error: failed to join wave files internally.\n\nThe following exception was caught: %1$s</string>
 
     <string name="write_files_fragment_label">Write to files</string>
     <string name="write_to_file_alert_message_success">The file was successfully synthesised as: </string>
     <string name="alert_positive_message">Okay</string>
 
-    <string name="cannot_speak_empty_text_msg">Cannot speak empty/blank text!</string>
-    <string name="cannot_tranlsate_empty_text_msg">Cannot translate empty/blank text!</string>
-    <string name="cannot_tranlsate_empty_source_language_text_msg">Cannot translate please select source language!</string>
-    <string name="cannot_swipe_empty_text">Cannot swipe please select source text not translated!</string>
-    <string name="cannot_tranlsate_empty_target_language_text_msg">Cannot translate please select target language!</string>
+    <string name="cannot_speak_empty_text_msg">Can not speak empty/blank text!</string>
+    <string name="cannot_tranlsate_empty_text_msg">Can not translate empty/blank text!</string>
+    <string name="cannot_tranlsate_empty_source_language_text_msg">Can not translate please select source language!</string>
+    <string name="cannot_swipe_empty_text">Can not swipe please select source text not translated!</string>
+    <string name="cannot_tranlsate_empty_target_language_text_msg">Can not translate please select target language!</string>
     <string name="cannot_read_clipboard_android_10_msg">\'Read clipboard\' doesn\'t work on Android 10 yet.</string>
 
     <string name="no_engine_available_message">No text-to-speech engine is available.</string>
@@ -109,5 +109,444 @@
     <string name="failed_to_get_tts_data_title">Failed to get TTS data</string>
     <string name="alert_negative_message1">No thanks</string>
     <string name="failed_to_get_tts_data_msg">Your device was unable to download the text-to-speech data. Perhaps your device has no network access? It is also possible that there is no data available for your selected language.\n\nTry looking in your device\'s settings for \"Text-to-speech output\". You should be able to change your selected language or use a different text-to-speech engine.</string>
+    <string name="noSignFound">No Signature Found...</string>
+    <string name="clear">Clear</string>
+    <string name="signature">Signature</string>
+    <string name="color">Color</string>
+    <string name="createSig">Create Sig</string>
+    <string name="saved_sig">Saved Sig</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="select_language">Please Select Language</string>
+    <string name="language_not_suport">Language not supported</string>
+    <string name="empty_text">Can not share empty text</string>
+    <string name="empty_text_spech">Can not Spech empty text</string>
+    <string name="copied">Copied</string>
+    <string name="connection_error">Internet connection not available. Please connect to internet.</string>
+
+    <string-array name="lang_array_bcp_47_code" translatable="false">
+
+        <item>af-ZA-South Africa</item>
+        <item>sq-AL-Albania</item>
+        <item>am-ET-Ethiopia</item>
+        <item>ar-DZ-Algeria</item>
+        <item>ar-BH-Bahrain</item>
+        <item>ar-EG-Egypt</item>
+        <item>ar-IQ-Iraq</item>
+        <item>ar-IL-Israel</item>
+        <item>ar-JO-Jordan</item>
+        <item>ar-KW-Kuwait</item>
+        <item>ar-LB-Lebanon</item>
+        <item>ar-MA-Morocco</item>
+        <item>ar-OM-Oman</item>
+        <item>ar-QA-Qatar</item>
+        <item>ar-SA-Saudi Arabic</item>
+        <item>ar-PS-Palestine</item>
+        <item>ar-TN-Tunisia</item>
+        <item>ar-AE-United Arab Emirates</item>
+        <item>ar-YE-Yemen</item>
+        <item>hy-AM-Armenia</item>
+        <item>az-AZ-Azerbaijan</item>
+        <item>eu-ES-Spain</item>
+        <item>bn-BD-Bangladesh</item>
+        <item>bn-IN-India</item>
+        <item>bs-BA-Bosnia and Herzegovina</item>
+        <item>bg-BG-Bulgaria</item>
+        <item>my-MM-Myanmar</item>
+        <item>ca-ES-Spain</item>
+        <item>yue-Hant-HK-Hong Kong</item>
+        <item>zh-CN-China</item>
+        <item>zh-TW-Taiwan</item>
+        <item>hr-HR-Croatia</item>
+        <item>cs-CZ-Czech Republic</item>
+        <item>da-DK-Denmark</item>
+        <item>nl-BE-Belgium</item>
+        <item>nl-NL-Netherlands</item>
+        <item>en-AU-Australia</item>
+        <item>en-CA-Canada</item>
+        <item>en-GH-Ghana</item>
+        <item>en-HK-Hong Kong</item>
+        <item>en-IN-India</item>
+        <item>en-IE-Ireland</item>
+        <item>en-KE-Kenya</item>
+        <item>en-NZ-New Zealand</item>
+        <item>en-NG-Nigeria</item>
+        <item>en-PK-Pakistan</item>
+        <item>en-PH-Philippines</item>
+        <item>en-SG-Singapore</item>
+        <item>en-ZA-South Africa</item>
+        <item>en-TZ-Tanzania</item>
+        <item>en-GB-United Kingdom</item>
+        <item>en-US-United States</item>
+        <item>et-EE-Estonia</item>
+        <item>fil-PH-Philippines</item>
+        <item>fi-FI-Finland</item>
+        <item>fr-BE-Belgium</item>
+        <item>fr-CA-Canada</item>
+        <item>fr-FR-France</item>
+        <item>fr-CH-Switzerland</item>
+        <item>gl-ES-Spain</item>
+        <item>ka-GE-Georgia</item>
+        <item>de-AT-Austria</item>
+        <item>de-DE-Germany</item>
+        <item>de-CH-Switzerland</item>
+        <item>el-GR-Greece</item>
+        <item>gu-IN-India</item>
+        <item>iw-IL-Israel</item>
+        <item>hi-IN-India</item>
+        <item>hu-HU-Hungary</item>
+        <item>is-IS-Iceland</item>
+        <item>id-ID-Indonesia</item>
+        <item>it-IT-Italy</item>
+        <item>it-CH-Switzerland</item>
+        <item>ja-JP-Japan</item>
+        <item>jv-ID-Indonesia</item>
+        <item>kn-IN-India</item>
+        <item>kk-KZ-Kazakhstan</item>
+        <item>km-KH-Cambodia</item>
+        <item>ko-KR-South Korea</item>
+        <item>lo-LA-Laos</item>
+        <item>lv-LV-Latvia</item>
+        <item>lt-LT-Lithuania</item>
+        <item>mk-MK-North Macedonia</item>
+        <item>ms-MY-Malaysia</item>
+        <item>ml-IN-India</item>
+        <item>mr-IN-India</item>
+        <item>mn-MN-Mongolia</item>
+        <item>ne-NP-Nepal</item>
+        <item>no-NO-Norway</item>
+        <item>fa-IR-Iran</item>
+        <item>pl-PL-Poland</item>
+        <item>pt-BR-Brazil</item>
+        <item>pt-PT-Portugal</item>
+        <item>pa-Guru-IN-India</item>
+        <item>ro-RO-Romania</item>
+        <item>ru-RU-Russia</item>
+        <item>sr-RS-Serbia</item>
+        <item>si-LK-Sri Lanka</item>
+        <item>sk-SK-Slovakia</item>
+        <item>sl-SI-Slovenia</item>
+        <item>es-AR-Spanish</item>
+        <item>es-BO-Bolivia</item>
+        <item>es-CL-Chile</item>
+        <item>es-CO-Colombia</item>
+        <item>es-CR-Costa Rica</item>
+        <item>es-DO-Dominican Republic</item>
+        <item>es-EC-Ecuador</item>
+        <item>es-SV-El Salvador</item>
+        <item>es-GT-Guatemala</item>
+        <item>es-HN-Honduras</item>
+        <item>es-MX-Mexico</item>
+        <item>es-NI-Nicaragua</item>
+        <item>es-PA-Panama</item>
+        <item>es-PY-Paraguay</item>
+        <item>es-PE-Peru</item>
+        <item>es-PR-Puerto Rico</item>
+        <item>es-ES-Spain</item>
+        <item>es-US-United States</item>
+        <item>es-UY-Uruguay</item>
+        <item>es-VE-Venezuela</item>
+        <item>su-ID-Indonesia</item>
+        <item>sw-KE-Kenya</item>
+        <item>sw-TZ-Tanzania</item>
+        <item>sv-SE-Sweden</item>
+        <item>ta-IN-India</item>
+        <item>ta-MY-Malaysia</item>
+        <item>ta-SG-Singapore</item>
+        <item>ta-LK-Sri Lanka</item>
+        <item>te-IN-India</item>
+        <item>th-TH-Thailand</item>
+        <item>tr-TR-Turkey</item>
+        <item>uk-UA-Ukraine</item>
+        <item>ur-IN-India</item>
+        <item>ur-PK-Pakistan</item>
+        <item>uz-UZ-Uzbekistan</item>
+        <item>vi-VN-Vietnam</item>
+        <item>zu-ZA-South Africa</item>
+
+    </string-array>
+
+    <string-array name="lang_array_name_local2" translatable="false">
+        <item>Afrikaans</item>
+        <item>Shqiptare</item>
+        <item>Amharic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Arabic</item>
+        <item>Armenian</item>
+        <item>Azərbaycanca</item>
+        <item>Euskara</item>
+        <item>Bengali</item>
+        <item>Bengali</item>
+        <item>Bosanski</item>
+        <item>български език</item>
+        <item>Burma</item>
+        <item>Català</item>
+        <item>Chinese</item>
+        <item>Simplified Chinese </item>
+        <item>Chinese</item>
+        <item>Hrvatski</item>
+        <item>Čeština</item>
+        <item>Dansk</item>
+        <item>Nederlands</item>
+        <item>Nederlands</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>Eesti</item>
+        <item>Pilipino</item>
+        <item>Suomi</item>
+        <item>Français</item>
+        <item>Français</item>
+        <item>Français</item>
+        <item>Français</item>
+        <item>Galego</item>
+        <item>Georgian</item>
+        <item>Deutsch</item>
+        <item>Deutsch</item>
+        <item>Deutsch</item>
+        <item>Ελληνικά</item>
+        <item>Gujarati</item>
+        <item>Abrit</item>
+        <item>Hindi</item>
+        <item>Magyar</item>
+        <item>Íslenska</item>
+        <item>Bahasa Indonesia</item>
+        <item>Italiano</item>
+        <item>Italiano</item>
+        <item>Japanese</item>
+        <item>Wong jawa</item>
+        <item>Kannada</item>
+        <item>Қазақ</item>
+        <item>Khmer</item>
+        <item>Korean</item>
+        <item>Lao</item>
+        <item>Latviešu</item>
+        <item>Lietuvių</item>
+        <item>Mакедонски</item>
+        <item>Melayu</item>
+        <item>Malayalam</item>
+        <item>Marathi</item>
+        <item>Монгол</item>
+        <item>Nepali</item>
+        <item>Norsk</item>
+        <item>Farsi</item>
+        <item>Polskie</item>
+        <item>Português</item>
+        <item>Português</item>
+        <item>Punjabi</item>
+        <item>Română</item>
+        <item>Русский</item>
+        <item>Српски</item>
+        <item>Sinhala</item>
+        <item>Slovenčina</item>
+        <item>Slovenščina</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Sundanis</item>
+        <item>Kiswahili</item>
+        <item>Kiswahili</item>
+        <item>Svenska</item>
+        <item>Tamil</item>
+        <item>Tamil</item>
+        <item>Tamil</item>
+        <item>Tamil</item>
+        <item>English</item>
+        <item>ไทย</item>
+        <item>Türkçe</item>
+        <item>Українська</item>
+        <item>Urdu</item>
+        <item>Urdu</item>
+        <item>Urdu</item>
+        <item>Tiếng Việt</item>
+        <item>isiZulu</item>
+
+    </string-array>
+
+    <string-array name="lang_array_name_local" translatable="false">
+        <item>Afrikaans</item>
+        <item>Shqiptare</item>
+        <item>ኣማርኛ</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>العربية</item>
+        <item>Հայերեն</item>
+        <item>Azərbaycanca</item>
+        <item>Euskara</item>
+        <item>বাংলা</item>
+        <item>বাংলা</item>
+        <item>Bosanski</item>
+        <item>български език</item>
+        <item>ဗမာ</item>
+        <item>Català</item>
+        <item>中國傳統的</item>
+        <item>简体中文</item>
+        <item>中國傳統的</item>
+        <item>Hrvatski</item>
+        <item>Čeština</item>
+        <item>Dansk</item>
+        <item>Nederlands</item>
+        <item>Nederlands</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>English</item>
+        <item>Eesti</item>
+        <item>Pilipino</item>
+        <item>Suomi</item>
+        <item>Français</item>
+        <item>Français</item>
+        <item>Français</item>
+        <item>Français</item>
+        <item>Galego</item>
+        <item>ქართული</item>
+        <item>Deutsch</item>
+        <item>Deutsch</item>
+        <item>Deutsch</item>
+        <item>Ελληνικά</item>
+        <item>ગુજરાતી</item>
+        <item>עברית</item>
+        <item>हिन्दी</item>
+        <item>Magyar</item>
+        <item>Íslenska</item>
+        <item>Bahasa Indonesia</item>
+        <item>Italiano</item>
+        <item>Italiano</item>
+        <item>日本語</item>
+        <item>Wong jawa</item>
+        <item>ಕನ್ನಡ</item>
+        <item>Қазақ</item>
+        <item>ភាសាខ្មែរ</item>
+        <item>한국인</item>
+        <item>ພາສາລາວ</item>
+        <item>Latviešu</item>
+        <item>Lietuvių</item>
+        <item>Mакедонски</item>
+        <item>Melayu</item>
+        <item>മലയാളം</item>
+        <item>मराठी</item>
+        <item>Монгол</item>
+        <item>नेपाली</item>
+        <item>Norsk</item>
+        <item>فارسی</item>
+        <item>Polskie</item>
+        <item>Português</item>
+        <item>Português</item>
+        <item>ਪੰਜਾਬੀ</item>
+        <item>Română</item>
+        <item>Русский</item>
+        <item>Српски</item>
+        <item>සිංහල</item>
+        <item>Slovenčina</item>
+        <item>Slovenščina</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Español</item>
+        <item>Sundanis</item>
+        <item>Kiswahili</item>
+        <item>Kiswahili</item>
+        <item>Svenska</item>
+        <item>தமிழ்</item>
+        <item>தமிழ்</item>
+        <item>தமிழ்</item>
+        <item>தமிழ்</item>
+        <item>తెలుగు</item>
+        <item>ไทย</item>
+        <item>Türkçe</item>
+        <item>Українська</item>
+        <item>اردو</item>
+        <item>اردو</item>
+        <item>O\'zbek</item>
+        <item>Tiếng Việt</item>
+        <item>isiZulu</item>
+
+    </string-array>
 
 </resources>

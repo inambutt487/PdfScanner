@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/done/baseline_done_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/arrow_drop_down_circle/baseline_arrow_drop_down_circle_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -34,7 +34,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="e10e00" />
-                            <entry key="outputName" value="icon_tick" />
+                            <entry key="outputName" value="arrow_down" />
                             <entry key="sourceFile" value="C:\Users\4star\Downloads\new_ic.svg" />
                           </map>
                         </option>

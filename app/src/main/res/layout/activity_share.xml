@@ -8,6 +8,7 @@
     tools:context="me.sid.smartcropper.views.activities.ShareActivity">
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
         android:background="@color/colorPrimary"
@@ -22,8 +23,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/_12sdp"
-        android:layout_marginStart="@dimen/_16sdp"
-        />
+        android:layout_marginStart="@dimen/_16sdp" />
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="Share"
+        app:layout_constraintBottom_toBottomOf="@+id/backImg"
+        app:layout_constraintStart_toEndOf="@id/backImg"
+        app:layout_constraintEnd_toStartOf="@+id/pdfImg"
+        app:layout_constraintTop_toTopOf="@+id/backImg" />
 
     <ImageView
         android:id="@+id/premiumImg"
@@ -34,6 +49,7 @@
         app:layout_constraintTop_toTopOf="@id/backImg"
         app:layout_constraintBottom_toBottomOf="@id/backImg"
         android:layout_marginEnd="@dimen/_16sdp"
+        android:visibility="gone"
         />
 
     <ImageView
@@ -41,11 +57,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/pdf_ad_ic"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@id/premiumImg"
         app:layout_constraintTop_toTopOf="@id/backImg"
         app:layout_constraintBottom_toBottomOf="@id/backImg"
         android:layout_marginEnd="@dimen/_12sdp"
-        android:layout_marginTop="8dp"
         />
 
     <androidx.cardview.widget.CardView
@@ -83,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:text="Share the love by inviting your friends and family to our app"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textColor="#4E5B6A"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +119,8 @@
                 app:layout_constraintEnd_toStartOf="@id/gmailImg"
                 app:layout_constraintTop_toBottomOf="@id/sharetxtr"
                 />
+
+
             <ImageView
                 android:id="@+id/gmailImg"
                 android:layout_width="wrap_content"
@@ -118,7 +137,7 @@
                 android:id="@+id/instaImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/gmail_ic"
+                android:src="@drawable/skype"
                 android:layout_marginTop="@dimen/_8sdp"
                 app:layout_constraintStart_toEndOf="@id/gmailImg"
                 app:layout_constraintTop_toBottomOf="@id/sharetxtr"
@@ -173,22 +192,9 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:background="@drawable/ad_bg"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/shareCv"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <com.facebook.ads.NativeAdLayout
-            android:id="@+id/native_ad_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <FrameLayout
-            android:id="@+id/admobNativeView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <include
             android:id="@+id/adlayout2"

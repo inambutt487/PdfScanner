@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="colors">
-        <item>#000000</item>
+        <item>#004cff</item>
         <item>#ff5252</item>
         <item>#ffeb3b</item>
         <item>#afb42b</item>

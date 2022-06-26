@@ -77,7 +77,6 @@ public class App extends ApplicationEx {
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        Toast.makeText(this, "Config Changes", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, SplashIconActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 

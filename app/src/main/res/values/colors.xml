@@ -16,7 +16,7 @@
 
 
     <color name="sea_green">#E10E00</color>
-    <color name="dark_grey">#3C4858</color>
+    <color name="dark_grey">#1e2939</color>
     <color name="pink">#FF005F</color>
     <color name="mid_grey">#4E5B6A</color>
     <color name="light_grey">#7E93AB</color>
@@ -36,5 +36,11 @@
     <color name="yellow_green_color_picker">#C5E17A</color>
     <color name="colorOrange">#FF881B</color>
     <color name="colorGreen">#4CAF50</color>
+
+    <color name="colorRed">#ff0000</color>
+
+    <color name="color1">#004cff</color>
+    <color name="color2">#ff030c</color>
+    <color name="color3">#000000</color>
 
 </resources>

@@ -61,6 +61,9 @@ public class MainActivity extends BaseActivity implements PermissionDialog.Permi
         setContentView(R.layout.activity_main);
 
         header = findViewById(R.id.header);
+        if(havePurchase()){
+            header.setVisibility(View.GONE);
+        }
 
         showNotification();
 
@@ -452,7 +455,6 @@ public class MainActivity extends BaseActivity implements PermissionDialog.Permi
 
 
     }
-
     private void notificationShow(String Title, String Message, String Image, String Action, String Link, String Rate, String FeatureImage) {
 
         final Dialog dialog = new Dialog(MainActivity.this);

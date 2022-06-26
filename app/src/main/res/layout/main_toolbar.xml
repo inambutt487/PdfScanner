@@ -22,18 +22,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_premium_d"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/toolbarTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_4sdp"
-        android:text="PDF SCANNER"
         android:textColor="@color/white"
         android:textSize="16sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintEnd_toStartOf="@+id/premiumImg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/menuImg"
         app:layout_constraintTop_toTopOf="parent" />

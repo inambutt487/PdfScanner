@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/premium_background"
     tools:context="me.sid.smartcropper.views.activities.PremiumActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginTop="20dp"
         android:text="SCANNER"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/_16sdp"
+        android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.574"
@@ -37,17 +37,18 @@
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_16sdp"
         android:src="@drawable/close_btn"
+        android:padding="@dimen/_15ssp"
         app:layout_constraintBottom_toBottomOf="@id/t1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/t1" />
 
     <ScrollView
+        android:id="@+id/scrolview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottamLayout"
         app:layout_constraintTop_toBottomOf="@id/t1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -75,7 +76,7 @@
                 android:layout_marginTop="@dimen/_16sdp"
                 android:text="Enjoy Premium!"
                 android:textColor="#4E5B6A"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,9 +90,9 @@
                 android:layout_marginTop="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:gravity="center"
-                android:text="Avail this offer and get 40% off right now. This offer is for limited time only"
+                android:text="Avail this offer and get 40% off right now. This offer is for limited time only."
                 android:textColor="#4E5B6A"
-                android:textSize="14sp"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/t3" />
@@ -116,14 +117,28 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/first_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:text="Get Rid of Annoying ads"
+                    android:text="Get Rid of Annoying ads."
                     android:textColor="#4E5B6A"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_10ssp"
                     app:layout_constraintBottom_toBottomOf="@id/im1"
                     app:layout_constraintStart_toEndOf="@id/im1"
+                    app:layout_constraintTop_toTopOf="@id/im1" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40% Off"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/_30ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/im1"
+                    app:layout_constraintStart_toEndOf="@id/first_text"
                     app:layout_constraintTop_toTopOf="@id/im1" />
 
 
@@ -152,9 +167,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:text="Unlimited PDF files"
+                    android:text="Unlimited PDF files."
                     android:textColor="#4E5B6A"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_10ssp"
                     app:layout_constraintBottom_toBottomOf="@id/im2"
                     app:layout_constraintStart_toEndOf="@id/im2"
                     app:layout_constraintTop_toTopOf="@id/im2" />
@@ -184,9 +199,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:text="Unlimited PDF file translation"
+                    android:text="Unlimited PDF file translation."
                     android:textColor="#4E5B6A"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_10ssp"
                     app:layout_constraintBottom_toBottomOf="@id/im3"
                     app:layout_constraintStart_toEndOf="@id/im3"
                     app:layout_constraintTop_toTopOf="@id/im3" />
@@ -216,9 +231,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:text="Screen Mirroring for all TV"
+                    android:text="Screen Mirroring for all TV."
                     android:textColor="#4E5B6A"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_10ssp"
                     app:layout_constraintBottom_toBottomOf="@id/im4"
                     app:layout_constraintStart_toEndOf="@id/im4"
                     app:layout_constraintTop_toTopOf="@id/im4" />
@@ -230,50 +245,49 @@
                 android:id="@+id/continueBtn"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_25sdp"
                 android:background="@drawable/button_seagreen"
-                android:text="Continue"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/cv1"
                 app:layout_constraintStart_toStartOf="@id/cv1"
-                app:layout_constraintTop_toBottomOf="@id/cv4" />
+                android:layout_marginBottom="@dimen/_10ssp" />
 
-            <View
-                android:id="@+id/line"
-                android:layout_width="1dp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_marginTop="24dp"
-                android:background="#00B1FF"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.553"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/continueBtn" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:text="Privacy Policy"
-                android:textColor="#00B1FF"
-                android:textSize="@dimen/_10ssp"
-                app:layout_constraintStart_toEndOf="@id/line"
-                app:layout_constraintTop_toTopOf="@id/line" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:text="Terms And Conditions"
-                android:textColor="#00B1FF"
-                android:textSize="@dimen/_10ssp"
-                app:layout_constraintEnd_toStartOf="@id/line"
-                app:layout_constraintTop_toTopOf="@id/line" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottamLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/privacy_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy  |  "
+            android:textColor="#00B1FF"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/terms_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms And Conditions"
+            android:textColor="#00B1FF"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

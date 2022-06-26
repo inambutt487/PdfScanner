@@ -10,44 +10,50 @@
     tools:context=".views.activities.SplashActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ads"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.3"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
         android:id="@+id/c1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/ads"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/ads"
+        app:layout_constraintBottom_toTopOf="@+id/c3">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/icon_pdf"
+            android:padding="@dimen/_5sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="115dp" />
-
-            <ImageView
-                android:id="@+id/splash_logo"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:src="@drawable/icon_pdf"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp">
 
             <TextView
                 android:id="@+id/tv0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
                 android:textColor="#c11010"
-                android:textSize="20dp"
+                android:textSize="@dimen/_15ssp"
                 android:text="PDF"
                 android:fontFamily="@font/roboto_bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,84 +63,79 @@
                 android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
                 android:textColor="#1E2939"
-                android:textSize="20dp"
+                android:textSize="@dimen/_15ssp"
                 android:layout_marginLeft="@dimen/_10ssp"
                 android:text="SCANNER &amp; CASTING"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv0"
                 app:layout_constraintTop_toBottomOf="@id/splash_logo" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv2"
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan, Crop, Share &amp; Save PDF Documents"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/_10ssp"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2">
+
+
+            <ImageView
+                android:id="@+id/img_btn0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Scan, Crop, Share &amp; Save PDF Documents"
-                android:textColor="@color/light_grey"
-                android:textSize="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv1" />
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_scan" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/img_btn1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv2">
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/splash_cast_icon" />
 
 
-                <ImageView
-                    android:id="@+id/img_btn0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginEnd="15dp"
-                    android:src="@drawable/ic_scan" />
+            <ImageView
+                android:id="@+id/img_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:src="@drawable/ic_edit_ic" />
 
 
-                <ImageView
-                    android:id="@+id/img_btn1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginEnd="15dp"
-                    android:src="@drawable/splash_cast_icon" />
+            <ImageView
+                android:id="@+id/img_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:src="@drawable/ic_sign_ic" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_share" />
 
-                <ImageView
-                    android:id="@+id/img_btn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginEnd="7dp"
-                    android:src="@drawable/ic_edit_ic" />
+        </LinearLayout>
 
-
-                <ImageView
-                    android:id="@+id/img_btn3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="9dp"
-                    android:src="@drawable/ic_sign_ic" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="9dp"
-                    android:src="@drawable/ic_share" />
-
-            </LinearLayout>
-
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -147,12 +148,14 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/splash_animation"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
+            android:layout_marginLeft="@dimen/_20ssp"
+            android:layout_marginRight="@dimen/_20ssp"
             app:lottie_rawRes="@raw/loading"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/loading"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -163,7 +166,7 @@
             android:textColor="#1E2939"
             android:textSize="20dp"
             android:text="Loading"
-            android:layout_marginTop="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_12ssp"
             app:layout_constraintTop_toBottomOf="@+id/splash_animation"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -238,55 +241,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ads"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@id/c3"
-        app:layout_constraintTop_toBottomOf="@id/c1">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="@dimen/_10sdp"
-            app:cardUseCompatPadding="true">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.facebook.ads.NativeAdLayout
-                    android:id="@+id/native_ad_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/ad_bg"
-                    android:visibility="gone" />
-
-                <FrameLayout
-                    android:id="@+id/admobNativeView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/ad_bg"
-                    android:elevation="@dimen/_8sdp"
-                    android:visibility="gone" />
-
-                <include
-                    android:id="@+id/adlayout"
-                    layout="@layout/ad_loading"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/ad_bg" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

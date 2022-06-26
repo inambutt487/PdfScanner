@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/settin_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="9dp"
         android:background="@null"
@@ -22,8 +22,8 @@
 
     <ImageButton
         android:id="@+id/pdf_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:visibility="invisible"
@@ -49,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CROPPING"
+        android:fontFamily="@font/roboto_bold"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,53 +58,61 @@
         android:textSize="18sp"
         />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@id/tv_crop_count"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn">
+
+        <me.sid.smartcropperlib.view.CropImageView
+            android:id="@+id/iv_crop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="6dp"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            app:civGuideLineColor="@color/colorBlue"
+            app:civLineColor="@color/colorBlue"
+            app:civMagnifierCrossColor="@color/black"
+            app:civPointColor="@color/colorBlue"
+            app:civPointFillColor="@color/colorBlue"
+            app:civShowEdgeMidPoint="true" />
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/left_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_back"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toTopOf="@id/crop_bottom_layout"
+        app:layout_constraintEnd_toStartOf="@+id/tv_crop_count"/>
 
     <ImageView
         android:id="@+id/right_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_forward"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <me.sid.smartcropperlib.view.CropImageView
-        android:id="@+id/iv_crop"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="6dp"
-        android:layout_weight="1"
-        android:paddingStart="20dp"
-        android:paddingTop="20dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="20dp"
-        app:civGuideLineColor="@color/bluedark"
-        app:civLineColor="@color/bluedark"
-        app:civMagnifierCrossColor="@color/bluedark"
-        app:civPointFillColor="@color/bluedark"
-        app:civShowEdgeMidPoint="true"
-        app:layout_constraintBottom_toTopOf="@id/tv_crop_count"
-        app:layout_constraintEnd_toStartOf="@id/right_page"
-        app:layout_constraintStart_toEndOf="@id/left_page"
-        app:layout_constraintTop_toBottomOf="@+id/back_btn" />
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        app:layout_constraintBottom_toTopOf="@id/crop_bottom_layout"
+        app:layout_constraintStart_toEndOf="@+id/tv_crop_count"/>
 
     <TextView
         android:id="@+id/tv_crop_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/roboto_bold"
         android:text="csc"
         android:textColor="#FAFAFA"
         android:textSize="17dp"
@@ -126,9 +135,62 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
+            app:layout_constraintGuide_begin="206dp" />
 
-        <Button
+        <TextView
+            android:id="@+id/deleteCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/crop_delete"
+            android:text="Delete"
+            android:layout_marginLeft="@dimen/_10ssp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/cropRetake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/crop_retake"
+            android:text="Retake"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@+id/deleteCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/cropBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/crop_crop"
+            android:text="Selection"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@+id/cropRetake"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!--<Button
             android:id="@+id/btn_crop_cancel"
             style="@style/CustomButton"
             android:layout_width="0dp"
@@ -170,7 +232,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/button_white"
-            android:text="@string/crop"
+            android:text="crop"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_confirm"
@@ -192,8 +254,27 @@
             app:layout_constraintBottom_toBottomOf="@id/btn_redo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_crop"
-            app:layout_constraintTop_toTopOf="@id/btn_redo" />
+            app:layout_constraintTop_toTopOf="@id/btn_redo" />-->
 
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:paddingLeft="@dimen/_10ssp"
+            android:paddingRight="@dimen/_10ssp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@drawable/button_seagreen"
+            android:text="Confirm"
+            android:textSize="@dimen/_12ssp"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/ic_check"
+            android:drawablePadding="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

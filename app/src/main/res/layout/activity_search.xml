@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F9FF"
-
     tools:context="me.sid.smartcropper.views.activities.SearchActivity">
 
     <View
@@ -30,6 +29,8 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/_8sdp"
         android:elevation="5dp"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
         android:background="@drawable/et_bg"
         android:hint="Enter File Name"
         android:textColor="@color/black"
@@ -41,10 +42,8 @@
         app:layout_constraintStart_toEndOf="@id/backBtn"
         app:layout_constraintTop_toTopOf="@id/backBtn"
         android:drawablePadding="@dimen/_8sdp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@id/backBtn"
-
-        >
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/backBtn">
         <requestFocus/>
     </EditText>
 

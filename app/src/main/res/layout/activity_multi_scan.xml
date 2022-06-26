@@ -6,16 +6,11 @@
     android:background="@color/white"
     tools:context=".views.activities.MultiScanActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:elevation="3dp"
+        layout="@layout/back_toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/dark_black" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +25,8 @@
             app:layout_constraintBottom_toTopOf="@id/btn_done"
             android:layout_marginBottom="18dp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"/>
+            android:layout_height="0dp"
+            android:padding="@dimen/_10sdp"/>
 
 
 
@@ -63,7 +59,7 @@
              android:layout_marginBottom="24dp"
             android:background="@drawable/button_pdf_pink"
             android:text="@string/save_file"
-            android:textSize="20dp"
+            android:textSize="@dimen/_12ssp"
             android:textAllCaps="false"
             android:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toStartOf="parent"

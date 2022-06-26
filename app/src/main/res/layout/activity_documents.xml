@@ -85,6 +85,7 @@
         android:paddingTop="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:tl_iconMargin="@dimen/_5sdp"
+        app:tl_textSize="@dimen/_10ssp"
         app:tl_indicator_color="@color/colorPrimary"
         app:tl_indicator_margin_left="@dimen/_20sdp"
         app:tl_indicator_margin_right="@dimen/_20sdp"
@@ -177,7 +178,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/adlayout" />
 
     <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
          android:id="@+id/btn_goToCamera"
@@ -213,22 +214,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
         android:layout_margin="@dimen/_4sdp"
+        android:visibility="gone"
         android:background="@drawable/ad_bg"
         app:layout_constraintTop_toBottomOf="@id/tabLayout">
-
-        <com.facebook.ads.NativeAdLayout
-            android:id="@+id/native_ad_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <FrameLayout
-            android:id="@+id/admobNativeView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <include
             android:id="@+id/adlayout2"

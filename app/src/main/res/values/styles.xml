@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -10,11 +10,16 @@
         <item name="android:dropDownListViewStyle">@style/popupMenuStyle</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="windowActionModeOverlay">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- Customize color of navigation drawer icon and back arrow -->
         <item name="colorControlNormal">@color/white</item>
+        <item name="textAllCaps">true</item>
+        <item name="textSize">18sp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
 
@@ -22,6 +27,7 @@
         <item name="android:textColor">@color/dark_black</item>
         <item name="android:divider">@color/colorGray</item>
         <item name="android:dividerHeight">1dp</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 <!--
 

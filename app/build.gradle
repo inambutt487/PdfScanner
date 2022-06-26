@@ -10,51 +10,34 @@ android {
         applicationId "com.pdfscanner.documentscanner.pdfmaster"
         minSdkVersion 23
         targetSdkVersion 31
-        versionCode 1
-        versionName "1"
+        versionCode 7
+        versionName "1.0.7"
+        ndk {
+            abiFilters 'armeabi-v7a', "arm64-v8a"
 
+        }
         resConfigs "en"
-
     }
     buildTypes {
 
         debug {
-
-            manifestPlaceholders = [crashlyticsEnabled: false]
-
-            minifyEnabled false
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-
-            resValue "string", "admob_app_id", "ca-app-pub-3940256099942544~3347511713"
-            resValue "string", "admob_banner", "ca-app-pub-3940256099942544/6300978111"
-            resValue "string", "admob_interstitial", "ca-app-pub-3940256099942544/1033173712"
-            resValue "string", "admob_native", "ca-app-pub-3940256099942544/2247696110"
-
-            resValue "string", "fb_banner", ""
-            resValue "string", "fb_rectangle", ""
-            resValue "string", "fb_interstitial", "IMG_16_9_APP_INSTALL#955635561844164_966026594138394"
-            resValue "string", "fb_native", "IMG_16_9_APP_INSTALL#955635561844164_966027294138324"
-        }
-
-        release {
-
+            manifestPlaceholders = [crashlyticsEnabled: true]
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-
-            resValue "string", "admob_app_id", "ca-app-pub-7461973117883281~2530779434"
-            resValue "string", "admob_banner", ""
-            resValue "string", "admob_interstitial", ""
-            resValue "string", "admob_native", ""
-
-            resValue "string", "fb_banner", ""
-            resValue "string", "fb_rectangle", ""
-            resValue "string", "fb_interstitial", ""
-            resValue "string", "fb_native", ""
         }
+
+        release {
+            manifestPlaceholders = [crashlyticsEnabled: true]
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "12g"
     }
 
     lintOptions {
@@ -66,12 +49,18 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    splits {
+        abi {
+            include  "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
 }
 
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
 
@@ -83,6 +72,12 @@ dependencies {
     //Editing
     implementation project(path: ':photoeditor')
 
+    //Signature
+    implementation 'com.kyanogen.signatureview:signature-view:1.2'
+
+    //Smart Crop
+    implementation project(path: ':smartcropperlib')
+
     //Create PDF
     implementation files('libs\\itextpdf-5.0.6.jar')
 
@@ -92,18 +87,16 @@ dependencies {
     //Design
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
-    implementation 'com.android.support:percent:25.3.0'
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     //Firebase
     def firebase = "29.0.1"
     implementation platform("com.google.firebase:firebase-bom:$firebase")
 
-    implementation 'com.google.firebase:firebase-config'
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-analytics'
@@ -130,8 +123,6 @@ dependencies {
     implementation 'com.github.nguyenhoanglam:ImagePicker:1.4.3'
 
     //Ads Update Ads
-    implementation 'com.google.android.gms:play-services-ads:19.7.0'
-    implementation 'com.facebook.android:audience-network-sdk:6.+'
 
     //tts
     implementation 'org.jetbrains.anko:anko-sdk15:0.9'
@@ -144,4 +135,6 @@ dependencies {
     //Translation
     implementation 'org.jsoup:jsoup:1.11.1'
 
+    //PDF Viwer
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 }

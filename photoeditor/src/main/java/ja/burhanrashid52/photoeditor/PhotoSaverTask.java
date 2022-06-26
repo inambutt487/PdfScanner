@@ -157,8 +157,13 @@ class PhotoSaverTask extends AsyncTask<String, String, PhotoSaverTask.SaveResult
                 view.getHeight(),
                 Bitmap.Config.ARGB_8888
         );
-        Canvas canvas = new Canvas(bitmap);
-        view.draw(canvas);
+        try {
+            Canvas canvas = new Canvas(bitmap);
+            view.draw(canvas);
+
+        } catch (Exception e) {
+            return bitmap;
+        }
         return bitmap;
     }
 

@@ -73,31 +73,14 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@+id/saveBtn"
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/ad_bg"
-        />
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/ad_bg" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp" />
-
-    <com.facebook.ads.NativeAdLayout
-        android:id="@+id/native_ad_container"
-        android:layout_below="@+id/saveBtn"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/ad_bg"
-        android:visibility="gone"
-        />
-
-    <FrameLayout
-        android:id="@+id/admobNativeView"
-        android:layout_below="@+id/saveBtn"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/ad_bg"
-        android:visibility="gone"
-        />
 </RelativeLayout>

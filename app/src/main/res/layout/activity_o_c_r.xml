@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,6 +9,7 @@
 
 
     <View
+        android:id="@+id/viewTop"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_70sdp"
         android:background="@color/colorPrimary"
@@ -33,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_16sdp"
         android:src="@drawable/ic_premium_d"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/menuImg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/menuImg" />
@@ -42,73 +42,132 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_4sdp"
-        android:text="OCR"
+        android:text="OCR Text"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="@dimen/_18ssp"
         app:layout_constraintBottom_toBottomOf="@id/menuImg"
         app:layout_constraintStart_toEndOf="@id/menuImg"
         app:layout_constraintTop_toTopOf="@id/menuImg" />
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_2ssp"
+        app:layout_constraintTop_toBottomOf="@id/viewTop">
+
+
+        <TextView
+            android:id="@+id/deleteTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10ssp"
+            android:drawableTop="@drawable/ocr_delete"
+            android:drawablePadding="@dimen/_3sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Delete"
+            android:textColor="#1e2939"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/retakeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ocr_retake"
+            android:drawablePadding="@dimen/_3sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Retake"
+            android:textColor="#1e2939"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deleteTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/retakeEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ocr_edit"
+            android:drawablePadding="@dimen/_3sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Edit"
+            android:textColor="#1e2939"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/retakeTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/copyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ocr_copy2"
+            android:drawablePadding="@dimen/_3sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Copy"
+            android:textColor="#1e2939"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/retakeEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shareTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_share_ic"
+            android:drawablePadding="@dimen/_3sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Share"
+            android:textColor="#1e2939"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/copyTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:background="@drawable/button_seagreen"
+            android:drawableStart="@drawable/ic_save_text"
+            android:drawablePadding="@dimen/_3sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="Save File"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_margin="@dimen/_20sdp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/menuImg">
+        app:layout_constraintTop_toBottomOf="@id/header_buttons">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <TextView
-                android:id="@+id/copyTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_8sdp"
-                android:drawableStart="@drawable/ic_copy_ic"
-                android:drawablePadding="@dimen/_8sdp"
-                android:text="Copy"
-                android:textColor="#1e2939"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/shareTxt"
-                app:layout_constraintStart_toStartOf="parent" />
-
-
-            <TextView
-                android:id="@+id/shareTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_8sdp"
-                android:drawableStart="@drawable/ic_share_ic"
-                android:drawablePadding="@dimen/_8sdp"
-                android:text="Share"
-                android:textColor="#1e2939"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/btn_done"
-                app:layout_constraintStart_toEndOf="@id/copyTxt" />
-
-            <TextView
-                android:id="@+id/btn_done"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_8sdp"
-                android:drawableStart="@drawable/ic_save_text"
-                android:drawablePadding="@dimen/_8sdp"
-                android:text="Save"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/shareTxt" />
-
-            <TextView
+            <EditText
                 android:id="@+id/ocrText"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -116,11 +175,12 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/roboto"
                 android:gravity="start"
+                android:scrollbars="vertical"
                 android:text="@string/ocr_waiting_text"
                 android:textColor="#7E93AB"
-                android:scrollbars = "vertical"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toTopOf="@id/copyTxt"
+                android:textSize="@dimen/_10ssp"
+                android:focusableInTouchMode="false"
+                app:layout_constraintBottom_toTopOf="@+id/btnOK"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -134,6 +194,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+            <TextView
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/botton_ok"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -144,22 +223,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
         android:layout_margin="@dimen/_4sdp"
+        android:visibility="gone"
         android:background="@drawable/ad_bg"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <com.facebook.ads.NativeAdLayout
-            android:id="@+id/native_ad_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <FrameLayout
-            android:id="@+id/admobNativeView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <include
             android:id="@+id/adlayout2"

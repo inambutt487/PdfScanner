@@ -26,7 +26,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/files"
         android:textColor="@color/light_grey"
-        android:textSize="12dp"
+        android:textSize="@dimen/_12ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -43,7 +43,7 @@
         android:paddingStart="5dp"
         android:text="Sort By"
         android:textColor="@color/light_grey"
-        android:textSize="14sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -101,23 +101,8 @@
         android:layout_height="@dimen/_80sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="@dimen/_8sdp"
-        android:background="@drawable/ad_bg"
-        >
-
-        <com.facebook.ads.NativeAdLayout
-            android:id="@+id/native_ad_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:visibility="gone"
-            />
-
-        <RelativeLayout
-            android:id="@+id/admobBanner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            />
+        android:visibility="gone"
+        android:background="@drawable/ad_bg">
 
         <include
             android:id="@+id/adlayout2"
@@ -136,6 +121,7 @@
         android:background="@drawable/button_seagreen"
         android:text="Import Files"
         android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/adlayout"
         app:layout_constraintEnd_toEndOf="parent"

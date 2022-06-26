@@ -18,8 +18,9 @@
             android:layout_height="wrap_content"
             android:text="Trash Documents"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16ssp"
             android:textColor="@color/black"
+            android:fontFamily="@font/roboto_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="@dimen/_16sdp"
@@ -29,11 +30,11 @@
             android:id="@+id/settingBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/setting_ic"
+            android:src="@drawable/ic_premium_d"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/text1"
             app:layout_constraintBottom_toBottomOf="@id/text1"
-            />
+            android:visibility="gone"/>
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -67,7 +68,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/button_seagreen"
             android:text="@string/delete"
-            android:textSize="16sp"
+            android:textSize="@dimen/_12ssp"
             android:textAllCaps="false"
             android:fontFamily="@font/roboto"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +85,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/button_pdf_pink"
             android:text="Restore"
-            android:textSize="16sp"
+            android:textSize="@dimen/_12ssp"
             android:textAllCaps="false"
             android:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toEndOf="@+id/btn_delete"

@@ -70,7 +70,6 @@ public class PremiumActivity extends BaseActivity {
 
                 SkuDetails skuDetails = getConsoleProductDeatils();
                 if (skuDetails != null) {
-                    tinyDB.putBoolean("isPurchased", true);
                     lunchPruchaseFlow(PremiumActivity.this);
                 }
 

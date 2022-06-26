@@ -9,10 +9,11 @@
 
     <ImageView
         android:id="@+id/backimg"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_back"
         android:scaleType="centerInside"
+        android:padding="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_premium_d"
-        android:layout_marginEnd="@dimen/_10sdp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="visible"
+        android:layout_marginRight="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,14 +34,18 @@
 
 
     <TextView
+        android:id="@+id/toolbarTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_4sdp"
-        android:text="PDF SCANNER"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_bold"
         android:textColor="@color/white"
         android:textSize="16sp"
+        android:text="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/backimg"
+        app:layout_constraintEnd_toStartOf="@+id/premiumImg"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

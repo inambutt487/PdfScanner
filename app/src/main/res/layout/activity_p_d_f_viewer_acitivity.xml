@@ -3,32 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.activities.PDFViewerAcitivity">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:elevation="3dp"
-        app:theme="@style/ToolbarTheme"
-        android:backgroundTint="@color/colorPrimary"
+        layout="@layout/pdf_toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/white" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
-
-    <me.sid.smartcropper.pdf.PdfRendererView
+    <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -37,15 +20,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+    <TextView
+        android:id="@+id/pdfText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_10ssp"
+        android:visibility="gone"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/btn_translate"
+        style="@style/CustomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/_50sdp"
+        android:paddingLeft="@dimen/_50sdp"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_10ssp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/button_seagreen"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Translate"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/bannerLayout"
         android:background="#0B1017"
-        android:visibility="gone"
         android:paddingTop="@dimen/_20sdp"
-        android:paddingBottom="@dimen/_20sdp">
+        android:paddingBottom="@dimen/_20sdp"
+        >
 
         <TextView
             android:id="@+id/pageNum"
@@ -56,7 +72,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            />
 
 
         <ImageView
@@ -73,7 +90,8 @@
             app:layout_constraintEnd_toStartOf="@id/pageNum"
             app:layout_constraintTop_toTopOf="@id/pageNum"
             app:layout_constraintBottom_toBottomOf="@id/pageNum"
-            android:layout_marginEnd="@dimen/_16sdp" />
+            android:layout_marginEnd="@dimen/_16sdp"
+            />
 
 
 
@@ -92,6 +110,10 @@
             android:focusable="true"
             android:gravity="center"
             android:layout_weight="0.5"/>
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

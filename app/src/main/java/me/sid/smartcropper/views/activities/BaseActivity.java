@@ -92,9 +92,8 @@ public class BaseActivity extends AppCompatActivity {
     public static ArrayList<Bitmap> mutliCreatedArrayBitmap = new ArrayList<>();
 
 
-
     static {
-        // System.loadLibrary("NativeImageProcessor");
+
     }
 
     @Override
@@ -191,13 +190,13 @@ public class BaseActivity extends AppCompatActivity {
     public void showProducts(Context context) {
 
         ArrayList<String> skuList = new ArrayList<>();
-        if (BuildConfig.DEBUG) {
+        /*if (BuildConfig.DEBUG) {
             skuList.add("android.test.purchased");
         } else {
             skuList.add(BuildConfig.APPLICATION_ID);
-        }
+        }*/
 
-
+        skuList.add(BuildConfig.APPLICATION_ID);
         SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
         params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
 
@@ -253,16 +252,17 @@ public class BaseActivity extends AppCompatActivity {
 
                     if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
 
-                        tinyDB.putBoolean("isPurchased", true);
-
-                        tinyDB.putString("getOrderId", purchase.getOrderId());
-                        tinyDB.putString("getPackageName", purchase.getPackageName());
-                        tinyDB.putString("getPurchaseTime", "" + purchase.getPurchaseTime());
-
-                        startActivity(new Intent(context, MainActivity.class));
 
                         //Update Ads Show False
                         if (!purchase.isAcknowledged()) {
+
+                            tinyDB.putBoolean("isPurchased", true);
+
+                            tinyDB.putString("getOrderId", purchase.getOrderId());
+                            tinyDB.putString("getPackageName", purchase.getPackageName());
+                            tinyDB.putString("getPurchaseTime", "" + purchase.getPurchaseTime());
+
+                            startActivity(new Intent(context, MainActivity.class));
                             AcknowledgePurchaseParams acknowledgePurchaseParams =
                                     AcknowledgePurchaseParams.newBuilder()
                                             .setPurchaseToken(purchase.getPurchaseToken())
@@ -523,12 +523,13 @@ public class BaseActivity extends AppCompatActivity {
             return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result3 == PackageManager.PERMISSION_GRANTED;
         }
     }
+
     public static void requestPermission(Activity context) {
         if (SDK_INT >= Build.VERSION_CODES.R) {
             try {
                 Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
                 intent.addCategory("android.intent.category.DEFAULT");
-                intent.setData(Uri.parse(String.format("package:%s",context.getApplicationContext().getPackageName())));
+                intent.setData(Uri.parse(String.format("package:%s", context.getApplicationContext().getPackageName())));
                 context.startActivityForResult(intent, 2296);
             } catch (Exception e) {
                 Intent intent = new Intent();
@@ -578,12 +579,12 @@ public class BaseActivity extends AppCompatActivity {
     public boolean havePurchase() {
         try {
             tinyDB = new TinyDB(this);
-            if(tinyDB.getBoolean("isPurchased")){
+            if (tinyDB.getBoolean("isPurchased")) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
 
@@ -597,7 +598,6 @@ public class BaseActivity extends AppCompatActivity {
         metrics.scaledDensity = configuration.fontScale * metrics.density;
         context.getResources().updateConfiguration(configuration, metrics);
         Log.d("APP", "Configurations updated");
-
     }
 
 }

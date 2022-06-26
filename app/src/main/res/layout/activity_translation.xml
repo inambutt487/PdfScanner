@@ -13,7 +13,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -26,8 +25,7 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:background="@drawable/translate_header"
+            android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.1"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,50 +36,46 @@
                 android:id="@+id/sourceLangSelector"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/black_point"
+                android:background="@drawable/translate_header"
                 android:drawablePadding="@dimen/_10sdp"
-                android:fontFamily="@font/roboto_bold"
-                android:paddingLeft="@dimen/_10sdp"
+                android:fontFamily="@font/roboto"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20ssp"
                 android:text="Auto Detect"
                 android:textAlignment="center"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_8ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
+            <ImageView
+                android:id="@+id/buttonSwitchLang"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:innerRadius="0dp"
-                android:shape="ring"
-                app:cardCornerRadius="75dp"
+                android:src="@drawable/icon_conversion"
+                android:scaleType="centerInside"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/targetLangSelector"
                 app:layout_constraintStart_toEndOf="@+id/sourceLangSelector"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"/>
 
-                <ImageView
-                    android:id="@+id/buttonSwitchLang"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/swipe" />
-            </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/targetLangSelector"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:drawableRight="@drawable/black_point"
+                android:background="@drawable/translate_header"
+                android:drawableRight="@drawable/arrow_down"
                 android:drawablePadding="@dimen/_10sdp"
-                android:fontFamily="@font/roboto_bold"
-                android:paddingRight="@dimen/_10sdp"
+                android:fontFamily="@font/roboto"
                 android:text="English"
                 android:textAlignment="center"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_8ssp"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -92,11 +86,11 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/scr_text"
             android:padding="@dimen/_5sdp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintHeight_percent="0.35"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/header">
 
@@ -106,7 +100,9 @@
                 android:layout_height="match_parent"
                 android:layout_above="@+id/main_function"
                 android:layout_margin="@dimen/_5sdp"
-                android:inputType="textMultiLine">
+                android:inputType="textMultiLine"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/sourceText"
@@ -114,7 +110,10 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:gravity="top"
-                    android:hint="@string/source_text_hint" />
+                    android:clickable="false"
+                    android:editable="false"
+                    android:paddingTop="@dimen/_12ssp"
+                    android:textSize="@dimen/_12ssp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -122,37 +121,35 @@
                 android:id="@+id/main_function"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true">
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_5sdp">
 
-                <ImageView
-                    android:id="@+id/translation_paste"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
+
+                <TextView
+                    android:id="@+id/translation_import2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:drawableTop="@drawable/icom_import"
                     android:scaleType="centerInside"
-                    android:src="@drawable/paste"
-                    android:visibility="gone" />
+                    android:text="Import"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
 
-                <ImageView
-                    android:id="@+id/translation_import"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_toRightOf="@+id/translation_paste"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/icom_import" />
-
-                <ImageView
+                <TextView
                     android:id="@+id/translation_specker"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_toRightOf="@+id/translation_import"
+                    android:layout_toRightOf="@+id/translation_import2"
+                    android:drawableTop="@drawable/icon_voice2"
                     android:scaleType="centerInside"
-                    android:src="@drawable/icon_voice2" />
+                    android:text="Pronounce "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
 
                 <Button
                     android:id="@+id/btn_tranlsate"
@@ -160,58 +157,67 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_5sdp"
                     android:background="@drawable/button_seagreen"
                     android:fontFamily="@font/roboto_bold"
-                    android:paddingLeft="@dimen/_20sdp"
-                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
                     android:text="Translate"
                     android:textAllCaps="false"
-                    android:textSize="@dimen/_16ssp" />
+                    android:textSize="@dimen/_12ssp" />
 
             </RelativeLayout>
 
 
-        </RelativeLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ads"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text">
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/close_btn"
+                android:visibility="gone" />
 
 
             <TextView
+                android:id="@+id/translation_import"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ads placement"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_centerInParent="true"
+                android:drawableTop="@drawable/image_import"
+                android:scaleType="centerInside"
+                android:text="Import"
+                android:alpha="0.5"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+        </RelativeLayout>
+
 
         <RelativeLayout
+            android:id="@+id/layoutTranslated"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
             android:background="@drawable/trs_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ads">
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text">
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@+id/main_function_translate"
                 android:layout_margin="@dimen/_5sdp"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
                 android:textColorHint="@color/white"
-                android:inputType="textMultiLine">
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/targetText"
@@ -227,7 +233,11 @@
                     android:gravity="top"
                     android:hint="@string/translated_text_hint"
                     android:paddingTop="@dimen/_10sdp"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:hintEnabled="false"
+                    app:hintTextColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
